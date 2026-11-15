@@ -1,15 +1,18 @@
+# Online Course App with Assessment Feature
 
-**General Notes**
+This repository contains the Django-based Online Course application extended with an exam assessment feature, built as part of the IBM Full Stack Cloud Developer curriculum.
 
-An `onlinecourse` app has already been provided in this repo upon which you will be adding a new assesement feature.
+## Features Implemented
+- **Data Models**: Added `Question`, `Choice`, and `Submission` models with scoring logic (`is_get_score`).
+- **Django Admin Customization**: Integrated `QuestionInline` in `LessonAdmin` and `ChoiceInline` in `QuestionAdmin` across 7 registered model classes.
+- **Exam Workflow**:
+  - Course details view embeds an interactive exam form styled with Bootstrap 4.
+  - Form submission handles answers via the `submit` view and saves learner choices.
+  - Results evaluation computes final grade and highlights correct vs. incorrect answers in `exam_result_bootstrap.html`.
 
-- If you want to develop the final project on Theia hosted by [IBM Developer Skills Network](https://labs.cognitiveclass.ai/), you will need to create the same project structure on Theia workspace and save it everytime you close the browser
-- Or you could develop the final project locally by setting up your own Python runtime and IDE
-- Hints for the final project are left on source code files
-- You may choose any cloud platform for deployment (default is IBM Cloud Foundry)
-- Depends on your deployment, you may choose any SQL database Django supported such as SQLite3, PostgreSQL, and MySQL (default is SQLite3)
+## ER Diagram
+![Onlinecourse ER Diagram](static/media/course_images/onlinecourse_app_er.png)
 
-**ER Diagram**
-For your reference, we have prepared the ER diagram design for the new assesement feature.
-
-![Onlinecourse ER Diagram](https://github.com/ibm-developer-skills-network/final-cloud-app-with-database/blob/master/static/media/course_images/onlinecourse_app_er.png)
+## Verification Screenshots
+- `03-admin-site.png`: Django admin dashboard displaying Authentication and OnlineCourse sections.
+- `07-final.png`: Successful exam result page with score and congratulatory feedback.
